@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@layer base {
+  h1, h2, h3, h4 {
+    @apply text-primary;
+    font-family: 'Roboto', sans-serif;
+  }
+  p, a {
+    @apply text-secondary;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  a {
+    @apply transition duration-200 ease-in-out hover:text-selected;
+  }
+
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 0.055em;
+  }
+  h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 0.055em;    
+  }
+  h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0.055em;
+  }
+  p, a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+  }
+
+
+  
+  @media (min-width:768px) {
+    h1 {
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 36px;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    p {
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 130%;
+      letter-spacing: 0.015em;
+    }
+    a {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  @media (min-width:1024px) {
+    h1 {
+      font-size: 64px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    p {
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 130%;
+      letter-spacing: 0.015em;
+    }
+    a {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: -0.01em;
+    }
+  }
+}
+
+#input-email {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+
+  padding-left: 30px;
+  align: center;
+  height: 60px;
+}
+
+.bg-gradient-purple-1 {
+  background: radial-gradient(100% 168.49% at 84.52% 0%, #6F66E1 4.69%, #4E44CD 100%);
+}
+
+.btn-gradient {
+  background: linear-gradient(180deg, #7369E3 0%, #443BB7 100%);
+}
+
+.bg-gradient-purple-2 {
+  background: radial-gradient(120.49% 239.59% at 100% 0%, #4E45C0 4.69%, #7A54E7 100%);
+}
+
+#help-dropdown {
+  left: -25px;
+}
+
+.feature-text-block {
+  @apply bg-text-block py-40 px-40;
+  border-radius: 10px;
+}
+
+#invalid-email-hint {
+  @apply text-p2-sm font-p2-sm;
+  margin-left: 30px;
+  bottom: -32px;
+}
+
+#active-nav-link {
+  @apply text-primary hover:text-primary;
+}
+
+.add-wallet-btn {
+  @apply transition duration-400 ease-in-out transform hover:scale-97 hover:bg-btn-hover;
+  padding: 20px 40px;
+}
+
+#navbar {
+  height: 105px;
+}
+
+#logo-img {
+  width: 45px;
+  height: 45px;
+}
+
+#eth-logo {
+  height: 154px;
+  width: 148px;
+  @apply mb-20;
+}
+
+@media (min-width:768px) {
+  #input-email {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+  
+    padding-left: 24px;
+    align: center;
+    height: 48px;
+  }
+
+
+  #invalid-email-hint {
+    @apply text-p2-md font-p2-md;
+    font-size: 14px;
+    margin-left: 24px;
+    bottom: -22px;
+  }
+
+  #help-dropdown-toggle:hover #help-dropdown-content {
+    @apply absolute px-20 py-20 bg-text-block shadow-lg grid grid-flow-row gap-20 rounded-sm;
+  }
+
+  .feature-text-block {
+    @apply bg-text-block;
+    padding: 35px 28px;
+    border-radius: 10px;
+  }
+
+  .add-wallet-btn {
+    @apply transition duration-400 ease-in-out transform hover:scale-97 hover:bg-btn-hover;
+    padding: 12px 20px;
+  }
+
+  #help-dropdown-content {
+    display: none;
+    right: -24px;
+  }
+
+  #eth-logo {
+    height: 141px;
+    width: 137px;
+    @apply mb-0;
+  }
+  
+  #logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  #navbar {
+    height: 80px;
+  }
+
+  #input-email {
+    height: 48px;
+  }
+}
+
+#close-dropdown-icon {
+  width: 30px;
+  height: 30px;
+} 
+
+#menu-toggle {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width:1024px) {
+  #eth-logo {
+    height: 94px;
+    width: 91px;
+    @apply mb-0;
+  }
+
+  #input-email {
+    width: 331px;
+    height: 48px;
+  }
+}
